@@ -1,0 +1,41 @@
+---
+title: "Exploration of RMarkdown in class meeting 3"
+author: E Wicksteed
+date: 10 September 2019
+output: 
+  html_document:
+    keep md: true
+    theme: cerulean
+    toc: true
+    number_sections: true
+    toc_float: true
+---
+
+<!-- this is how to add a comment in rmarkdown for html -->
+
+<!-- 
+tibble::as_tibble()
+can use this instead of importing the whole library 
+and it also makes the code readable so we know which packages come from which libraries
+-->
+
+<!--
+label code chunk but {r <name>}
+-->
+```{r load, warning=FALSE, echo=FALSE}
+library(gapminder)
+library(tibble)
+library(DT)
+```
+
+### Print out gapminder data (this is already a tibble):
+
+```{r gapminder}
+gapminder
+```
+
+### Convert mtcars to a tibble, and wrap in datatable:
+```{r datatable}
+datatable(as_tibble(mtcars))
+```
+

@@ -1,0 +1,31 @@
+---
+title: "Exploration of RMarkdown in class meeting 3"
+author: "Eve Wicksteed"
+date: "10/09/2019"
+output: ioslides_presentation
+---
+
+# this will create a slide with this title
+
+```{r load, warning=FALSE, echo=FALSE}
+library(gapminder)
+library(tibble)
+library(DT)
+```
+
+## level 2 headers will create a new slide
+### and level three headers will show up as a section in the slides
+### section 2
+
+## Print out gapminder data (this is already a tibble):
+
+```{r gapminder}
+gapminder
+```
+
+## Convert mtcars to a tibble, and wrap in datatable:
+
+```{r datatable}
+datatable(as_tibble(mtcars))
+```
+
