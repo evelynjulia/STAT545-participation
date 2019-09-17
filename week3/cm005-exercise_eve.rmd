@@ -101,7 +101,8 @@ The following code mistakenly puts the month variable on the y-axis. Fill in the
 
 ```{r, fig.width = 5, fig.height = 2}
 ggplot(mauna, aes(y = month)) +
-  geom_point(aes(FILL_THIS_IN))
+  geom_point(aes(x= month, y = conc))+
+  ylab("CO2")
 ```
 
 ### 2(c)
@@ -109,8 +110,11 @@ ggplot(mauna, aes(y = month)) +
 You can store the output of the plot in a variable, too. Store the plot from 2(a) in the variable named `p`, then add a layer to `p` that adds green points to the plot.
 
 ```{r, fig.width = 5, fig.height = 2}
-p +
-  FILL_THIS_IN(colour = FILL_THIS_IN)
+p <- ggplot(mauna, aes(month, conc)) +
+  geom_line() +
+  theme_minimal()
+
+p + geom_point(colour = "green", alpha = 0.2)
 ```
 
 ### 2(d)
@@ -119,7 +123,7 @@ What's wrong with the following code? Fix it.
 
 ```{r, fig.width = 5, fig.height = 2}
 ggplot(gapminder) +
-  geom_point(x = gdpPercap, y = lifeExp, alpha = 0.1)
+  geom_point(aes(x = gdpPercap, y = lifeExp), alpha = 0.1)
 ```
 
 
