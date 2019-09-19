@@ -69,9 +69,9 @@ select(gapminder, continent, everything())
 
 ```{r}
 # compare
-select(gapminder, FILL_THIS_IN)
+select(gapminder, cont=continent, everything())
 
-rename(gapminder, FILL_THIS_IN)
+rename(gapminder, cont= continent)
 ```
 
 
@@ -80,19 +80,19 @@ rename(gapminder, FILL_THIS_IN)
 1. Order by year.
 
 ```{r}
-arrange(gapminder, FILL_THIS_IN)
+arrange(gapminder, year)
 ```
 
 2. Order by year, in descending order.
 
 ```{r}
-arrange(gapminder, FILL_THIS_IN)
+arrange(gapminder, desc(year))
 ```
 
 3. Order by year, then by life expectancy.
 
 ```{r}
-arrange(gapminder, FILL_THIS_IN, FILL_THIS_IN)
+arrange(gapminder, year, lifeExp)
 ```
 
 ## Piping, `%>%` (8 min)
@@ -114,7 +114,11 @@ Now using with pipes:
 
 ```{r}
 # alter the below to include 2 "pipes"
-arrange(select(gapminder, year, lifeExp, country), year, lifeExp)
+# the pipe takes the previous thing and adds it into the first argument of the next line
+
+gapminder %>%
+  select(year, lifeExp, country) %>%
+  arrange(year, lifeExp)
 ```
 
 # Resume lecture 
