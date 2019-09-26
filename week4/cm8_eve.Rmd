@@ -49,9 +49,11 @@ Fix this plot so that it shows life expectancy over time _for each country_. Not
 
 ```{r, fig.width = 5, fig.height = 2}
 gapminder %>% 
-  group_by(country) %>% 
-  ggplot(aes(year, lifeExp)) +
-  geom_line()
+  # group_by(country) %>%  # --> the gg plot doesn't take this into account
+  ggplot(aes(year, lifeExp, group = country, colour = country == "Rwanda")) +
+  geom_line(alpha = 0.3) + 
+  #theme(legend.position = "none") + # this is how to remove a legend
+  scale_colour_discrete("", labels = c("Other", "Rwanda"))
 ```
 
 
@@ -65,7 +67,8 @@ gapminder %>%
 ```{r, fig.width = 5, fig.height = 2}
 ggplot(gapminder, aes(gdpPercap, lifeExp)) +
   geom_point(alpha = 0.2) +
-  scale_x_log10()
+  scale_x_log10(labels = scales::comma_format()) +
+  facet_wrap(~continent, scales = "free") # this scale argument lets x and y axes be different for each plot
 ```
 
 ### 3(b) Bubble Plot
@@ -78,10 +81,11 @@ ggplot(gapminder, aes(gdpPercap, lifeExp)) +
 ```{r, fig.width = 5, fig.height = 2}
 gapminder %>% 
   filter(continent != "Oceania") %>% 
-  ggplot(aes(gdpPercap, lifeExp)) +
-  facet_wrap(~ continent) +
-  geom_point(alpha = 0.2) +
-  scale_x_log10(labels = scales::comma_format())
+  ggplot(aes(gdpPercap, lifeExp, size = pop, fill = continent)) +
+  facet_wrap(~ continent, nrow = 1) +
+  geom_point(alpha = 0.5, shape = 21) +
+  scale_x_log10(labels = scales::comma_format())+
+  scale_size_area()
 ```
 
 A list of shapes can be found [at the bottom of the `scale_shape` documentation](https://ggplot2.tidyverse.org/reference/scale_shape.html).
