@@ -149,12 +149,24 @@ Fix the plot so that you can actually see the data points. Be sure to solve the 
 ```r
 gapminder %>% 
   filter(continent == "Americas") %>% 
-  ggplot(aes(country, lifeExp)) + 
+  ggplot(aes(lifeExp, country)) + 
+  ggridges::geom_density_ridges()
+```
+
+```
+## Picking joint bandwidth of 3.63
+```
+
+![](cm8_eve_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+
+```r
   geom_point() +
   geom_boxplot()
 ```
 
-![](cm8_eve_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+```
+## Error: Cannot add ggproto objects together. Did you forget to add this object to a ggplot object?
+```
 
 ### 5(b) Ridgeplots
 
