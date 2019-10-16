@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "CM 13"
 author: "Eve Wicksteed"
 date: "15/10/2019"
 output: html_document
@@ -82,13 +82,8 @@ It's ridiculous to swap the axes and because it makes it look like gun deaths de
 
 Great resource for selecting the right plot: https://www.data-to-viz.com/ ; encourage you all to consult it when choosing to visualize data.
 
-### Case Study 1: Context matters
 
-### Case Study 2: A case for pie charts
-
-## Part 3: Principles of effective visualizations [20 mins]
-
-We will be filling these principles in together as a class
+Darkhorse analytics:
 
 1. remove backgrounds
 1. remove redundant labels
@@ -96,6 +91,24 @@ We will be filling these principles in together as a class
 1. reduce colours
 1. remove special effects
 1. remove bolding
+
+### Case Study 1: Context matters
+
+The axes are very different
+
+
+### Case Study 2: A case for pie charts
+
+## Part 3: Principles of effective visualizations [20 mins]
+
+We will be filling these principles in together as a class
+
+1.
+1.
+1.
+1.
+1.
+
 
 
 ### Make a great plot worse
