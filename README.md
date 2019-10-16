@@ -12,3 +12,7 @@ Click on the links to go to the page for each day's participation files.
 - [Class meeting 7](https://evelynjulia.github.io/STAT545-participation/week4/cm7_eve.html)
 - [Class meeting 8](https://evelynjulia.github.io/STAT545-participation/week4/cm8_eve.html)
 - [Class meeting 9](https://evelynjulia.github.io/STAT545-participation/week5/cm09_eve.nb.html)
+- [Class meeting 10](https://evelynjulia.github.io/STAT545-participation/week5/cm10_eve.html)
+- Class meeting 11 is a .R file and can be found [here](https://evelynjulia.github.io/STAT545-participation/week6)
+- [Class meeting 12](https://evelynjulia.github.io/STAT545-participation/week6/cm12_eve.html)
+- [Class meeting 13](https://evelynjulia.github.io/STAT545-participation/week7/cm13_eve.html)
