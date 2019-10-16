@@ -13,6 +13,6 @@ Click on the links to go to the page for each day's participation files.
 - [Class meeting 8](https://evelynjulia.github.io/STAT545-participation/week4/cm8_eve.html)
 - [Class meeting 9](https://evelynjulia.github.io/STAT545-participation/week5/cm09_eve.nb.html)
 - [Class meeting 10](https://evelynjulia.github.io/STAT545-participation/week5/cm10_eve.html)
-- Class meeting 11 is a .R file and can be found [here](https://github.com/evelynjulia/STAT545-participation/tree/master/week6)
+- Class meeting 11 is a .R file and can be found [here](https://github.com/evelynjulia/STAT545-participation/blob/master/week6/gapminder_test_cm11.R)
 - [Class meeting 12](https://evelynjulia.github.io/STAT545-participation/week6/cm12_eve.html)
 - [Class meeting 13](https://evelynjulia.github.io/STAT545-participation/week7/cm13_eve.html)
